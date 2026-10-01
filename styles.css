@@ -1,0 +1,55 @@
+/* ===== Estilos del prototipo: Gestión de pedidos · Guías ===== */
+:root{--side:#1f2a33;--sidehi:#34434f;--bg:#f4f5f6;--ink:#1d252c;--mute:#6b7780;--line:#dde1e5;--head:#2b3640;--accent:#e8a317;
+--ok:#1d7a4d;--okbg:#d9f2e4;--warn:#9a6200;--warnbg:#fdecc8;--info:#1b5fa8;--infobg:#dcebfa;--bad:#a33a3a;--badbg:#f8e0e0}
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);display:flex;min-height:100vh}
+aside{width:220px;background:var(--side);color:#cfd8de;padding:22px 12px;flex-shrink:0;display:flex;flex-direction:column}
+.logo{font-size:20px;font-weight:700;color:#fff;padding:0 10px 16px}
+.sec{font-size:11px;color:#7d8c97;margin:14px 10px 6px;letter-spacing:.04em}
+aside a{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:6px;color:#cfd8de;text-decoration:none;cursor:pointer}
+aside a.on{background:var(--sidehi);color:#fff}
+.cnt{background:var(--accent);color:#1d252c;border-radius:99px;font-size:12px;font-weight:700;padding:1px 8px}
+.who{margin-top:auto;padding:14px 10px 0;border-top:1px solid #34434f;font-size:12px;color:#9fb0bc}
+.who select{width:100%;margin-top:6px;padding:7px;border-radius:6px;border:0;font:inherit}
+main{flex:1;padding:24px 28px;min-width:0}
+h2{margin:0 0 4px;font-size:22px}
+.sub{color:var(--mute);margin-bottom:18px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.bar .sp{flex:1}
+.btn{border:1px solid var(--line);background:#fff;border-radius:6px;padding:8px 14px;font:inherit;cursor:pointer;color:var(--ink)}
+.btn.dark{background:var(--head);color:#fff;border-color:var(--head);font-weight:600}
+.btn.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.btn.bad{background:#fff;color:var(--bad);border-color:var(--bad)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:16px}
+.tw{overflow-x:auto;border-radius:8px;border:1px solid var(--line);background:#fff}
+table{border-collapse:collapse;width:100%;min-width:760px}
+th{background:var(--head);color:#fff;text-align:left;font-size:12px;padding:11px 12px;white-space:nowrap}
+td{padding:10px 12px;border-top:1px solid var(--line)}
+td.m{font-family:ui-monospace,Consolas,monospace;font-size:12.5px}
+.pill{display:inline-block;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:600;white-space:nowrap}
+.p-transp{background:var(--warnbg);color:var(--warn)}.p-reparto{background:var(--infobg);color:var(--info)}
+.p-entregada,.p-aprobado{background:var(--okbg);color:var(--ok)}.p-sin{background:#e9ecef;color:var(--mute)}
+.p-pendiente{background:var(--warnbg);color:var(--warn)}.p-devuelto{background:var(--badbg);color:var(--bad)}
+.tabs{display:flex;gap:6px;margin-bottom:14px}
+.tab{padding:7px 14px;border-radius:6px;border:1px solid var(--line);background:#fff;cursor:pointer;font:inherit}
+.tab.on{background:var(--head);color:#fff;border-color:var(--head)}
+.env{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--line)}
+.env:first-child{border-top:0}
+.env small{color:var(--mute);display:block}
+.arrow{color:var(--mute);padding:0 6px}
+.unread{font-family:ui-monospace,Consolas,monospace;font-size:12px;color:var(--bad);word-break:break-all}
+.note{background:var(--badbg);border-left:4px solid var(--bad);padding:10px 12px;border-radius:4px;margin:10px 0}
+textarea,select.f{width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;font:inherit}
+dialog{border:0;border-radius:10px;padding:22px;width:min(480px,92vw);box-shadow:0 10px 40px #0004}
+dialog::backdrop{background:#0006}
+dialog h3{margin:0 0 10px}
+dialog label{display:block;margin:12px 0 4px;font-weight:600}
+.row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+#toast{position:fixed;bottom:20px;right:20px;background:var(--ink);color:#fff;padding:11px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none}
+#toast.show{opacity:1}
+.empty{color:var(--mute);padding:18px 0}
+.foot{margin-top:16px;color:var(--mute);font-size:12px}
+.foot button{background:none;border:0;color:var(--info);text-decoration:underline;cursor:pointer;font:inherit;padding:0}
+@media(max-width:860px){body{flex-direction:column}aside{width:auto;padding:12px}.who{display:none}main{padding:16px}}
